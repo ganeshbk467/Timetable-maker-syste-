@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="table.css">
+
+    <script>
+        if (!localStorage.getItem("currentUser")) {
+            window.location.href = "index.html";
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Automatic Timetable Creator</h2>
+
+<p id="welcome"></p>
+
+<div class="section">
+    <h3>Add Teacher</h3>
+    <input type="text" id="teacherName" placeholder="Teacher Name">
+    <input type="text" id="teacherSubject" placeholder="Subject">
+    <button onclick="addTeacher()">Add</button>
+</div>
+
+<div class="section">
+    <h3>Add Class</h3>
+    <input type="text" id="className" placeholder="Class Name">
+    <button onclick="addClass()">Add</button>
+</div>
+
+<div class="section">
+    <button onclick="generateTimetable()">Generate Timetable</button>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<h3>Generated Timetable</h3>
+<div id="timetable"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

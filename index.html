@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="table.css">
 </head>
 <body>
-    
+
+<div class="login-container">
+    <h2>User Login</h2>
+
+    <input type="text" id="loginUsername" placeholder="Username">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+
+    <p>Don't have account? <a href="register.html">Register</a></p>
+    <p id="error"></p>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
